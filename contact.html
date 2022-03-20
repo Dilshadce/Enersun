@@ -82,7 +82,7 @@
                         <ul class="website-info">
                             <li>
                                 <i class="far fa-envelope"></i>
-                                <a href="mailto:support@Enersun.com">INFO@ENERSUNGROUP.COM</a>
+                                <a href="mailto:info@enersungroup.com">INFO@ENERSUNGROUP.COM</a>
                             </li>
                             <li>
                                 <i class="fas fa-map-marker-alt"></i>
@@ -227,8 +227,9 @@
                             <div class="contact-box">
                                 <i class="ar-icons-email"></i>
                                 <div class="box">
+                                    <br>
                                      <a class="mail" href="mailto:info@enersungroup.com">info@enersungroup.com</a>
-                                     <a class="mail" href="mailto:support@enersungroup.com">support@enersungroup.com</a>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -253,7 +254,7 @@
                     </div>
                     <div class="col-lg-6">
 						<div class="add-comments">
-							<form class="inner-add-comments">
+							<form enctype="multipart/form-data" class="inner-add-comments" action="" method="POST" name="contactus" id="contactus">
 								<div class="row">
 									<div class="col-md-6 inner-add-comments-box">
 										<input type="text" placeholder="Name" required>
@@ -262,7 +263,7 @@
 										<input type="Email" placeholder="Email" required>
 									</div>
 									<div class="col-md-12 inner-add-comments-box">
-										<input type="text" placeholder="Website" required>
+										<input type="number" placeholder="Phone Number" required>
 									</div>
 									<div class="col-md-12 inner-add-comments-box">
 										<textarea placeholder="Your Message Here " required></textarea>
@@ -355,6 +356,26 @@
         
         <!-- :: Main JS -->
         <script src="assets/js/main.js"></script>
+
+        <script>
+        $("#contactus").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbx_s2PioQWtFQDvYDYslQ_1j09WvqX6Xn3qAAqa/exec",
+                data:$("#contactus").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Message sent successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
     </body>
 
 </html>
