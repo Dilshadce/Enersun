@@ -257,16 +257,16 @@
 							<form enctype="multipart/form-data" class="inner-add-comments" action="" method="POST" name="contactus" id="contactus">
 								<div class="row">
 									<div class="col-md-6 inner-add-comments-box">
-										<input type="text" placeholder="Name" required>
+										<input type="text" name="Name" placeholder="Name" required>
 									</div>
 									<div class="col-md-6 inner-add-comments-box">
-										<input type="Email" placeholder="Email" required>
+										<input type="Email" name="Email" placeholder="Email" required>
 									</div>
 									<div class="col-md-12 inner-add-comments-box">
-										<input type="number" placeholder="Phone Number" required>
+										<input type="number" name="Phone" placeholder="Phone Number" required>
 									</div>
 									<div class="col-md-12 inner-add-comments-box">
-										<textarea placeholder="Your Message Here " required></textarea>
+										<textarea name="Message" placeholder="Your Message Here " required></textarea>
 									</div>
 									<div class="col-md-12 inner-add-comments-box last">
 										<button class="btn-1 btn-3 submit" type="submit"><span>Submit</span></button>
@@ -361,7 +361,7 @@
         $("#contactus").submit((e)=>{
             e.preventDefault()
             $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbx_s2PioQWtFQDvYDYslQ_1j09WvqX6Xn3qAAqa/exec",
+                url:"https://script.google.com/macros/s/AKfycbzt_FVauasP_mGklik1y2N662082H2yMr4Hz4qEOw/exec",
                 data:$("#contactus").serialize(),
                 method:"post",
                 success:function (response){
