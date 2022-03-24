@@ -9737,11 +9737,10 @@ section.contact-form-section.style-three {
 
 .service-block-four .icon {
     position: relative;
-    width: 130px;
+    width: 120px;
     height: 130px;
     margin: 0 auto 30px;
     background-size: cover;
-    border-radius: 50%;
     color: #fff;
     line-height: 130px;
     font-size: 55px;
@@ -9764,11 +9763,9 @@ section.contact-form-section.style-three {
 .service-block-four .icon:before {
     position: absolute;
     content: '';
-    left: 5px;
     top: 0;
     width: 100%;
     bottom: 0;
-    border-radius: 50%;
 }
 
 .service-block-four h5 {
